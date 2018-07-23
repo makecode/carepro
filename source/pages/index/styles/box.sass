@@ -1,13 +1,14 @@
 .boxes
+  margin-top: 40px
   display: flex
   flex-direction: row
   justify-content: space-between
   flex-wrap: wrap
 
 .box
+  position: relative
   padding: 20px 26px
   width: 225px
-  position: relative
   text-align: center
   border: 1px solid #f0f4f7
   box-sizing: border-box
@@ -24,6 +25,7 @@
 
   &__description
     font-size: 12px
+    line-height: 1.2
     font-weight: 300
 
   &__price
@@ -31,3 +33,33 @@
     display: flex
     flex-direction: column
     text-transform: uppercase
+
+  .badge
+    position: absolute
+    left: -1px
+    padding: 10px
+    width: 225px
+    text-align: center
+    font-size: 13px
+    border: 1px solid
+    box-sizing: border-box
+
+    &.is-orange
+      top: -40px
+      border: 1px solid #f68500
+      color: #f68500
+      background-color: #fffbee
+      font-weight: 600
+      text-transform: uppercase
+
+    &.is-green
+      bottom: -38px
+      font-size: 11px
+      border-color: #4eac26
+      color: #4eac26
+      background-color: #f3ffee
+
+    .icon
+      margin-right: 5px
+      font-size: 13px
+      line-height: 0

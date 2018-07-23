@@ -37,8 +37,9 @@ block main
                 span.price.is-old Usually <strike>$48</strike>
                 span.price NOW $24
                 span Annually
-              button(type='button').btn Added
+              button(type='button').btn.is-disabled Added
           div.box
+            div.badge.is-orange Most popular add-on
             div.box__wrap
               img.box__img(src=require('./../../media/logo_care.png'))
               span.box__title PC Care PRO
@@ -48,9 +49,12 @@ block main
                 span.price NOW $39
                 span Annually
               button(type='button').btn Add extra
+            div.badge.is-green
+              span.icon.icon-claimed
+              span.badge__text People bought this add-on today
           div.box
             div.box__wrap
-              img.box__img(src=require('./../../media/logo_vpn.png'))
+              img.box__img(src=require('./../../media/logo_vpn_small.png'))
               span.box__title VPN Secure Connection
               span.box__description Add extra privacy and protection to prevent snoopers watching your every move
               div.box__price
@@ -89,10 +93,12 @@ block main
                   span.icon.icon-check-small
                   span.protect__text Stop Snoopers Acessing Online Activity
             div.protect__right
+              div.protect__img
+                img(src=require('./../../media/box_1.png'))
               div.protect__price
                 span.price.is-old Usually <strike>$48</strike>
                 span.price NOW $15
-                span Annually
+                span.price__annual Annually
                 button(type='button').btn Add extra
           div.protect
             div.protect__left
@@ -110,6 +116,8 @@ block main
                   span.icon.icon-check-small
                   span.protect__text Protection Against Phishing Scam
             div.protect__right
+              div.protect__img
+                img(src=require('./../../media/box_2.png'))
               div.protect__price
                 span.price.is-old Usually <strike>$48</strike>
                 span.price NOW $9
@@ -131,6 +139,8 @@ block main
                   span.icon.icon-check-small
                   span.protect__text Stop Snoopers Acessing Online Activity
             div.protect__right
+              div.protect__img
+                img(src=require('./../../media/box_3.png'))
               div.protect__price
                 span.price.is-old Usually <strike>$48</strike>
                 span.price NOW $39
@@ -138,7 +148,9 @@ block main
                 button(type='button').btn Add extra
         div.purchase
           div.purchase__top
-            button(type='button').btn.is-large Continue & purchase my addons
+            button(type='button').purchase__btn.btn.is-large
+              span Continue & purchase my addons
+              span.icon.is-arrow
             span.purchase__text No Thanks, I don’t want 50% off any account addons
           div.purchase__bottom
             div.promo Promotional prices are available to new customers for the initial term only. All services automatically renew at the standart rate using the same term and payment method, unledd you request a change.

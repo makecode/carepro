@@ -8,7 +8,7 @@ block main
         div.header__left
           div.logo
             a.logo__link(href='#')
-              img.logo__img(src=require('./../../media/logo_PCCare.png'))
+              img.logo__img(src=require('./../../media/logo_vpn.png'))
         div.header__right
           div.antivirus
             div.antivirus__left
@@ -27,29 +27,40 @@ block main
         div.connection
           h1.connection__title Frequently bought with your package...
           div.connection__wrap
-            div.connection__left
-              div.upgrade
-                img.upgrade__img(src=require('./../../media/banner_local.png'))
-                span.upgrade__description <span class="orange i-bold">VPN Secure Connection</span> is our most popular protection enhancement.
-                p.upgrade__description Public Wi-Fi Hotspots can be a hacker's paradise. Following these basic security tips can mean the difference between safe surfing and an identity-theft or data-loss nightmare.
-                button(type='button').btn.is-gray Continue without vpn SP
-            div.connection__right
+            div.connection__item
               div.no-upgrade
-                h1.no-upgrade__title VPN Secure Connection
-                span.no-upgrade__price Huge Saving - Only $39
-                span.no-upgrade__discount Exclusive 50% Discount - Today Only
-                img.no-upgrade__img(src=require('./../../media/jackpot.png'))
-                ul.list
-                  li.list__el
-                    span.icon.icon.icon-check-small
-                    span.list__text 12 Months Safe and Reliable Connection
-                  li.list__el
-                    span.icon.icon.icon-check-small
-                    span.list__text Hide Your Location, Great for Streaming
-                  li.list__el
-                    span.icon.icon-check-small
-                    span.list__text Stop Snoopers Acessing Online Activity
-                button(type='button').btn Add vpn secure connection
+                div.no-upgrade__content
+                  div.no-upgrade__img
+                    img(src=require('./../../media/banner_local.png'))
+                    span.badge
+                      img(src=require('./../../media/off_day.png'))
+                  span.no-upgrade__description
+                    span.icon.is-star
+                    <span class="orange i-bold">VPN Secure Connection</span> is our most popular protection enhancement.
+                  p.no-upgrade__description Public Wi-Fi Hotspots can be a hacker's paradise. Following these basic security tips can mean the difference between safe surfing and an identity-theft or data-loss nightmare.
+                button(type='button').btn.is-large.is-gray.no-upgrade__btn
+                  span Continue without vpn SP
+                  span.icon.is-arrow
+            div.connection__item
+              div.upgrade
+                div.upgrade__content
+                  h1.upgrade__title VPN Secure Connection
+                  span.upgrade__price Huge Saving - Only $39
+                  span.upgrade__discount Exclusive 50% Discount - Today Only
+                  img.upgrade__img(src=require('./../../media/jackpot.png'))
+                  ul.list
+                    li.list__el
+                      span.icon.icon.icon-check-small
+                      span.list__text 12 Months Safe and Reliable Connection
+                    li.list__el
+                      span.icon.icon.icon-check-small
+                      span.list__text Hide Your Location, Great for Streaming
+                    li.list__el
+                      span.icon.icon-check-small
+                      span.list__text Stop Snoopers Acessing Online Activity
+                button(type='button').btn.is-large.upgrade__btn
+                  span Add vpn secure connection
+                  span.icon.is-arrow
     div.container
       div.pre-footer
         p By submitting this order, you agree to our <a>terms of service<?a>, <a>cancellation</a> & <a>privacy polities</a>. Introductery prices are for new customers initial term only. All resurring rervices automatically renew annually at the standart rete unless you request a change or cancel.
@@ -94,7 +105,8 @@ block main
               span.counter__text Limed time offer
           div.popup__right
             div.gift
-              img.gift__img(src=require('./../../media/gift.png'))
+              div.gift__img-wrap
+                img.gift__img(src=require('./../../media/gift.png'))
               span.gift__text FREE GIFT
               span.gift__price Worth $18
         div.popup__action

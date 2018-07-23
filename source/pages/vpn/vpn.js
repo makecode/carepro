@@ -8,6 +8,7 @@ $( document ).ready(function() {
   const popup = document.getElementById('popup');
   const btnPopup = document.getElementById('popup__close');
 
+  // show popup
   $('body').mouseleave(function(event) {
     if(event.clientY <= 0 ) {
       $(popup).fadeIn('slow');
@@ -15,13 +16,12 @@ $( document ).ready(function() {
     }
   });
 
-  const delayPopup = 3000;
-
   // close popup
   $(btnPopup).click(function () {
     $(popup).toggle();
     $(popupOverlay).toggle();
   });
+
 
   $(document).on('mousedown', function (e) {
     if (e.target === popupOverlay) {

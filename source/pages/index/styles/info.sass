@@ -1,0 +1,46 @@
+.info
+  position: fixed
+  top: 210px
+  right: -260px
+  padding: 10px
+  width: 250px
+  display: flex
+  flex-direction: row
+  align-items: center
+  border: 1px solid #f66e00
+  color: #f66e00
+  background-color: #f8eade
+  box-sizing: border-box
+  transition: right .3s ease-in-out
+  z-index: 2
+
+  &.is-visible
+    right: 1px
+
+  &__left
+    margin-right: 10px
+
+  &__title
+    font-size: 15px
+    font-weight: bold
+
+  &__descr
+    font-size: 16px
+
+  .icon
+    color: #f66e00
+    font-size: 30px
+    line-height: 0
+
+  &.is-green
+    top: 285px
+    border-color: #4eac26
+    color: #4eac26
+    background-color: #e6f0e2
+    transition: right .6s ease-in-out
+
+    .is-visible
+      right: 10px
+
+    .icon
+      color: #4eac26

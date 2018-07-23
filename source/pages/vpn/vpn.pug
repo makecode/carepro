@@ -1,0 +1,103 @@
+extends ../base
+block title
+  |Index page
+block main
+  header.header
+    div.container
+      div.header__wrap
+        div.header__left
+          div.logo
+            a.logo__link(href='#')
+              img.logo__img(src=require('./../../media/logo_PCCare.png'))
+        div.header__right
+          div.antivirus
+            div.antivirus__left
+              a.logo__link
+                img.logo__img(src=require('./../../media/comodo.png'))
+            div.antivirus__right
+              span.antivirus__icon
+                img(src=require('./../../media/icon_earch.png'))
+              span.antivirus__text 100% Secure payment
+  main.main
+    div.aler
+      div.container
+        img.alert__img(src=require('./../../media/alert.png'))
+    section.section.is-connection
+      div.container
+        div.connection
+          h1.connection__title Frequently bought with your package...
+          div.connection__wrap
+            div.connection__left
+              div.upgrade
+                img.upgrade__img(src=require('./../../media/banner_local.png'))
+                span.upgrade__description <span class="orange i-bold">VPN Secure Connection</span> is our most popular protection enhancement.
+                p.upgrade__description Public Wi-Fi Hotspots can be a hacker's paradise. Following these basic security tips can mean the difference between safe surfing and an identity-theft or data-loss nightmare.
+                button(type='button').btn.is-gray Continue without vpn SP
+            div.connection__right
+              div.no-upgrade
+                h1.no-upgrade__title VPN Secure Connection
+                span.no-upgrade__price Huge Saving - Only $39
+                span.no-upgrade__discount Exclusive 50% Discount - Today Only
+                img.no-upgrade__img(src=require('./../../media/jackpot.png'))
+                ul.list
+                  li.list__el
+                    span.icon.icon.icon-check-small
+                    span.list__text 12 Months Safe and Reliable Connection
+                  li.list__el
+                    span.icon.icon.icon-check-small
+                    span.list__text Hide Your Location, Great for Streaming
+                  li.list__el
+                    span.icon.icon-check-small
+                    span.list__text Stop Snoopers Acessing Online Activity
+                button(type='button').btn Add vpn secure connection
+    div.container
+      div.pre-footer
+        p By submitting this order, you agree to our <a>terms of service<?a>, <a>cancellation</a> & <a>privacy polities</a>. Introductery prices are for new customers initial term only. All resurring rervices automatically renew annually at the standart rete unless you request a change or cancel.
+
+  footer.footer
+    div.container
+      div.footer__wrap
+        div.copyright © 2018 PC Care Pro.
+        nav.nav
+          ul.nav__list
+            li.nav__el
+              a.nav__link Terms of Use
+            li.nav__el
+              a.nav__link Privacy policy
+            li.nav__el
+              a.nav__link Refund Policy
+            li.nav__el
+              a.nav__link Auto-Renew Policy
+            li.nav__el
+              a.nav__link Money Back Guarantee
+
+    div.popup-overlay#popup-overlay
+      div.popup#popup
+        span.popup__close.icon.icon-close#popup__close
+        div.popup__header
+          h1.popup__title Limited Time Offer
+          p.popup__subtitle Get Safe Browsing (VPN) for <span class='i-bold'>Only $39</span> & get Priority Support <span class='orange i-bold'>FREE!</span>
+        div.popup__body
+          img.popup__support(src=require('./../../media/priority-support.png'))
+          div.popup__left
+            ul.list
+              li.list__el
+                span.icon.icon-check-small
+                span.list__text Unlock Priority Support email
+              li.list__el
+                span.icon.icon-check-small
+                span.list__text Assigned VIP account status
+              li.list__el
+                span.icon.icon-check-small
+                span.list__text Queue jump for faster response times
+            div.counter
+              span.counter__text Limed time offer
+          div.popup__right
+            div.gift
+              img.gift__img(src=require('./../../media/gift.png'))
+              span.gift__text FREE GIFT
+              span.gift__price Worth $18
+        div.popup__action
+          button(type='button').popup__btn.btn.is-grey NO THANKS, CONTINUE
+          button(type='button').popup__btn.btn.is-medium GET VPN & REDEEM GIFT
+

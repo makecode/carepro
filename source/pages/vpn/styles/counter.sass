@@ -1,0 +1,52 @@
+.counter
+
+  &__title
+    margin-top: 15px
+    margin-bottom: 10px
+    color: #40ac31
+    font-weight: 600
+
+  &__content
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+
+  &__box
+    position: relative
+    margin-right: 8px
+
+    &:last-child
+      margin-right: 0
+
+      &::after
+        display: none
+
+    &::after
+      position: absolute
+      content: ':'
+      top: 50%
+      right: -6px
+      transform: translateY(-50%)
+      font-size: 20px
+
+  &__el
+    position: relative
+    padding: 4px 6px
+    margin: 0 1px
+    display: inline-block
+    background-color: #616a6c
+    color: #fff
+    font-size: 22px
+    font-weight: 600
+    z-index: 1
+    
+    &::after
+      position: absolute
+      content: ''
+      height: 50%
+      width: 100%
+      left: 0
+      bottom: 0
+      background-color: #7b8182
+      z-index: -1
+      font-size: 30px
